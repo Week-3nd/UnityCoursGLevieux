@@ -324,13 +324,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  randomTargetDistMin: 2
-  randomTargetDistMax: 10
+  randomTargetDistMin: 2.34
+  randomTargetDistMax: 18.79
   useRandomTarget: 0
   distStop: 1
   distSlowDown: 2
-  vitesseMax: 1
+  vitesseMax: 5.6
   acceleration: 1
+  drawGizmoTarget: 1
+  drawLineTarget: 1
 --- !u!1 &1160814391
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,9 +442,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1107388430}
-  followdist: 1.5
+  followdist: 2
   drawGizmoTarget: 1
-  couleur: {r: 1, g: 0, b: 0, a: 0.3}
+  GizmoColor: {r: 1, g: 0, b: 0, a: 0.3}
+  drawLineTarget: 1
 --- !u!1 &1888972085
 GameObject:
   m_ObjectHideFlags: 0

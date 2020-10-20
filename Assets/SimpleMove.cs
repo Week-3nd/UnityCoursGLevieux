@@ -21,6 +21,22 @@ public class SimpleMove : MonoBehaviour
 
     private bool atDestination = false;
 
+    public bool drawGizmoTarget = true;
+    public bool drawLineTarget = true;
+
+
+    void OnDrawGizmosSelected()
+    {
+        if (drawGizmoTarget)
+        {
+            // Sphère rouge a la distance de stop
+            Gizmos.color = new Color(1, 0, 0, 1.0f);
+            Gizmos.DrawWireSphere(targetPos, distStop);
+            // Sphère bleue a la distance de freinage
+            Gizmos.color = new Color(0, 0, 1, 1.0f);
+            Gizmos.DrawWireSphere(targetPos, distSlowDown);
+        }
+    }
     void Start()
     {
         SetRandomTargetPos();
@@ -45,6 +61,10 @@ public class SimpleMove : MonoBehaviour
             targetPos = randomTargetPos;
         else
             targetPos = target.position;
+
+        if (drawLineTarget)
+            Debug.DrawLine(transform.position, targetPos, GetComponent<Renderer>().material.color);
+
 
         //Distance au point
         Vector3 deplacement = targetPos - transform.position;
