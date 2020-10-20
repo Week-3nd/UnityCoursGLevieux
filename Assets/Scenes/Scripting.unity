@@ -324,10 +324,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  vitesse: 1
   randomTargetDistMin: 2
   randomTargetDistMax: 10
   useRandomTarget: 0
+  distStop: 0.24
+  distSlowDown: 2
+  vitesseMax: 1
+  acceleration: 1
 --- !u!1 &1160814391
 GameObject:
   m_ObjectHideFlags: 0
