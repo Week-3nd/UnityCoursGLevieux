@@ -5,7 +5,19 @@ using UnityEngine;
 public class FollowMove : MonoBehaviour
 {
     public Transform target;
-    public float followdist;
+    public float followdist=1.5f;
+
+    public bool drawGizmoTarget = true;
+    public Color couleur = new Color(1f, 0f, 0f, 0.3f);
+
+    void OnDrawGizmosSelected()
+    {
+        if (drawGizmoTarget)
+        {
+            Gizmos.color = couleur;
+            Gizmos.DrawSphere(target.position, followdist);
+        }
+    }
         
     // Start is called before the first frame update
     void Start()

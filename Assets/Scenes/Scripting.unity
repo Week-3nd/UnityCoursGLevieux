@@ -440,7 +440,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1107388430}
-  followdist: 2
+  followdist: 1.5
+  drawGizmoTarget: 1
+  couleur: {r: 1, g: 0, b: 0, a: 0.3}
 --- !u!1 &1888972085
 GameObject:
   m_ObjectHideFlags: 0
