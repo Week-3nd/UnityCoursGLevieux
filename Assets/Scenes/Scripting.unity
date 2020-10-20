@@ -327,7 +327,7 @@ MonoBehaviour:
   randomTargetDistMin: 2
   randomTargetDistMax: 10
   useRandomTarget: 0
-  distStop: 0.24
+  distStop: 1
   distSlowDown: 2
   vitesseMax: 1
   acceleration: 1
@@ -343,6 +343,7 @@ GameObject:
   - component: {fileID: 1160814394}
   - component: {fileID: 1160814393}
   - component: {fileID: 1160814392}
+  - component: {fileID: 1160814396}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -426,6 +427,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1160814396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160814391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60e5b43d742d7d0499a7b3f64d546420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1107388430}
+  followdist: 2
 --- !u!1 &1888972085
 GameObject:
   m_ObjectHideFlags: 0
