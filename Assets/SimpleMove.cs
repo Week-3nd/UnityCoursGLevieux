@@ -24,7 +24,6 @@ public class SimpleMove : MonoBehaviour
     public bool drawGizmoTarget = true;
     public bool drawLineTarget = true;
 
-
     void OnDrawGizmosSelected()
     {
         if (drawGizmoTarget)
@@ -37,6 +36,7 @@ public class SimpleMove : MonoBehaviour
             Gizmos.DrawWireSphere(targetPos, distSlowDown);
         }
     }
+
     void Start()
     {
         SetRandomTargetPos();
@@ -62,6 +62,7 @@ public class SimpleMove : MonoBehaviour
         else
             targetPos = target.position;
 
+        //Debug
         if (drawLineTarget)
             Debug.DrawLine(transform.position, targetPos, GetComponent<Renderer>().material.color);
 
