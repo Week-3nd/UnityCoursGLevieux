@@ -38,10 +38,7 @@ public class InputController : Controller
 
             WantedDirectionLookTargetSmooth = rotateHorizontal * rotateVertical * WantedDirectionLookTargetSmooth;
         }
-
-        //On applique doucement
-        SmoothWantedDirectionLook(Time.deltaTime);
-
+        
         //On change la direction de marche au clavier
         Vector2 axisMove = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
@@ -50,6 +47,9 @@ public class InputController : Controller
 
         //Vitesse entre 0 et 1, la vitesse réelle dépendra du corps qu on controlera
         WantedSpeed = Mathf.Max(Mathf.Abs(axisMove.x), Mathf.Abs(axisMove.y));
+
+        //On applique doucement
+        SmoothWantedDirectionLook(Time.deltaTime);
 
         //On affiche le debug
         DrawDebug();

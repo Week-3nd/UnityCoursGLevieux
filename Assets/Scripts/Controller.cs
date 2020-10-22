@@ -26,6 +26,7 @@ public abstract class Controller : MonoBehaviour
         if (DrawDebugDirections)
         {
             Debug.DrawLine(transform.position, transform.position + WantedDirectionMove * 2.0f, Color.blue);
+            //Debug.Log(WantedDirectionMove);
             Debug.DrawLine(transform.position, transform.position + WantedDirectionLookTargetSmooth * 2.0f, Color.red);
             Debug.DrawLine(transform.position, transform.position + WantedDirectionLook * 2.0f, Color.green);
         }
